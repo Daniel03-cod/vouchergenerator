@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>GOMOBILE</title>
+	<link rel="stylesheet" type="text/css" href="voucher.css">
+</head>
+<body>
+
+	<!-- navbar -->
+
+	<div id="navbar">
+		<span id="companyname"><b>GO</b>MOBILE</span>
+		
+		<button id="alertbtn" onmousemove="alertbtn()">&hearts;</button>
+	</div>
+		<!-- notification div -->
+	<div id="alertboard">
+		
+	</div>
+
+	<!-- display -->
+	<div id="displayscreen" onmousemove="changeview()">
+		<P id="totalbalhold">AVALIABLE BALANCE<br><br><input id="totalbal" type="number" value="10000" disabled=""></P>
+		<center>
+		<label>CHOOSE DESIRED PROVIDER:</label>
+		<select id="provider">
+			<option>AIRTEL</option>
+			<option>GLO</option>
+			<option>GODATA</option>
+			<option>MTN</option>
+			<option>9MOBILE</option>
+		</select><br><br><br>
+		<label>CHOOSE AMOUNT TYPE:</label>
+		<select id="amount">
+			<option>100</option>
+			<option>200</option>
+			<option>500</option>
+			<option>1000</option>
+		</select><br><br><br>
+		</center>
+
+		<button onclick="transactionbtn()" id="transactionbtn">TRANSACTIONS</button>
+		<button onclick="generatorbtn()" id="generatorbtn">GENERATE VOUCHER</button>
+	</div>
+
+	<!-- TRANSACTION BOARD -->
+	<div id="transactionboard">
+
+	</div>
+
+	<!-- VOUCHERSCREEN -->
+	<div id="voucherboard">
+		
+	</div>
+
+	<script type="text/javascript" src="voucher.js"></script>
+</body>
+</html>
