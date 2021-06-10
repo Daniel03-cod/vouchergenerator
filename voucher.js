@@ -1,3 +1,8 @@
+function money(){
+	text = localStorage.getItem("TotalAmount");
+	obj = JSON.parse(text);
+	document.getElementById("totalbal").value = obj;
+}
 function alertbtn() {
 	alertboard.style.display = "block";
 	alertboard.innerHTML ="<br>" +"<li>" + "Welcome to GOMOBLIE home of superb technology" + "</li>" + "<hr>"
@@ -11,17 +16,21 @@ function transactionbtn() {
 
 	text = localStorage.getItem("gomobile");
 	obj = JSON.parse(text);
-	document.getElementById("transactionboard").innerHTML += history.Provider;
-	document.getElementById("transactionboard").innerHTML += history.Amount;
-	document.getElementById("transactionboard").innerHTML += "<br>";
+	
+	for (let i = 0; i < obj.length; i++) {
+    document.getElementById("transactionboard").innerHTML += "<li>" + obj[i].Provider+ "-----------" + obj[i].Amount + "</li>" +"<br>";
+	}
+	
 }
 function generatorbtn() {
 	voucherboard.style.display = "block";
 	transactionboard.style.display = "none";
+	voucherboard.innerHTML = null;
 	var a = totalbal.value;
 	var b = amount.value;
 	var c = a - b;
 	totalbal.value = c;
+	localStorage.TotalAmount = JSON.stringify(c);
 	if (a <= 0) {
 		alert("TRANSACTION DECLINED");
 		totalbal.value = 0;

@@ -30,6 +30,7 @@ body{
     background-color: #1F252A;
     border-top-left-radius: 20px; 
     color: white;
+    font-family: cursive;
 }
 #displayscreen{
 	/*border: 1px solid orangered;*/
@@ -47,6 +48,7 @@ body{
 	background-color: white;
 	border: 1px solid white;
 	border-radius: 20px;
+	font-family: verdana;
 }
 #transactionbtn{
 	border: 1px solid dodgerblue;
