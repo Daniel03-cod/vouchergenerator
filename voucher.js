@@ -5,10 +5,16 @@ function money(){
 }
 function alertbtn() {
 	alertboard.style.display = "block";
-	alertboard.innerHTML ="<br>" +"<li>" + "Welcome to GOMOBLIE home of superb technology" + "</li>" + "<hr>"
+	ccboard.style.display = 'none';
+	alertboard.innerHTML ="<br>" +"<li>" + "Welcome to GOMOBLIE home of superb technology" + "</li>" + "<hr>" + "<br>";
+	alertboard.innerHTML +="<br>" +"<li>" + "You can always add more cash to your portal using CRYPTOCURRENCIES, BANK TRANSFER and many more." + "</li>" + "<hr>" + "<br>";
+	alertboard.innerHTML +="<li>" + "You can also get Support from our Support team using the ACE button." + "</li>" + "<hr>";
 }
 function changeview() {
 	alertboard.style.display = "none";
+}
+function changevieww() {
+	ccboard.style.display = 'none';
 }
 function transactionbtn() {
 	transactionboard.style.display = "block";
@@ -41,7 +47,7 @@ function generatorbtn() {
 	 var f = '07' + Math.floor(Math.random()*5) + Math.floor(Math.random()*10);
 	 var g = '09' + Math.floor(Math.random()*5) + Math.floor(Math.random()*10);
 	 var AIRTEL = d + e + f;
-	 voucherboard.innerHTML += "A" + d + "-" + e + "-" + f+ 5 + "-" + g + 3;
+	 voucherboard.innerHTML += d + "-" + e + "-" + f+ 5 + "-" + g + 3;
 	 voucherboard.innerHTML += "<br>";
 	}else{
 		if (provider.value == "GLO") {
@@ -50,7 +56,7 @@ function generatorbtn() {
 	 		var f = '07' + Math.floor(Math.random()*5) + Math.floor(Math.random()*10);
 	 		var g = '22' + Math.floor(Math.random()*5) + Math.floor(Math.random()*10);
 			 var GLO = d + e + f;
-	 		voucherboard.innerHTML += "GL" + d + "-" + e + "-" + f + "-" +g;
+	 		voucherboard.innerHTML += d + "-" + e + "-" + f + "-" +g;
 	 		voucherboard.innerHTML += "<br>";
 		}else{
 		if (provider.value == "GODATA") {
@@ -58,7 +64,7 @@ function generatorbtn() {
 	 		var e = '31' + Math.floor(Math.random()*5) + Math.floor(Math.random()*10);
 	 		var f = '0' + Math.floor(Math.random()*5) + Math.floor(Math.random()*10);
 			 var GLO = d + e + f;
-	 		voucherboard.innerHTML += "GO" + d + "-" + e + "-" + f;
+	 		voucherboard.innerHTML += d + "-" + e + "-" + f;
 	 		voucherboard.innerHTML += "<br>";
 		}else{
 		if (provider.value == "MTN") {
@@ -66,7 +72,7 @@ function generatorbtn() {
 	 		var e = '31' + Math.floor(Math.random()*5) + Math.floor(Math.random()*10);
 	 		var f = '07' + Math.floor(Math.random()*5) + Math.floor(Math.random()*10);
 			 var GLO = d + e + f;
-	 		voucherboard.innerHTML += "M" + d + "-" + e + "-" + f;
+	 		voucherboard.innerHTML += d + "-" + e + "-" + f;
 	 		voucherboard.innerHTML += "<br>";
 		}else{
 		if (provider.value == "9MOBILE") {
@@ -74,7 +80,7 @@ function generatorbtn() {
 	 		var e = '31' + Math.floor(Math.random()*5) + Math.floor(Math.random()*10);
 	 		var f = '07' + Math.floor(Math.random()*5) + Math.floor(Math.random()*10);
 			 var GLO = d + e + f;
-	 		voucherboard.innerHTML += "E" + d + "-" + e + 5 + "-" + f + 3;
+	 		voucherboard.innerHTML += d + "-" + e + 5 + "-" + f + 3;
 	 		voucherboard.innerHTML += "<br>";
 		}
 	}
@@ -91,3 +97,14 @@ let getCus =JSON.parse(localStorage.getItem('gomobile'));
 						allproduct.push(history);
 						localStorage.gomobile = JSON.stringify(allproduct);
 		}
+function ccbtn(){
+	ccboard.style.display = 'block';	
+	alertboard.style.display = "none";
+}
+function send(){
+	ccboardscreen.innerHTML += message.value + "  &larr;" + '<hr>' + "<br>";
+	message.value = null;
+}
+function addcashbtn() {
+	alert("UNDER CONSTRUCTION")
+}

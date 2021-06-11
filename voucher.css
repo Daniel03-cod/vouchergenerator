@@ -90,3 +90,29 @@ body{
     font-family: verdana;
     font-size: 30px;
 }
+#ccboard{
+	display: none;
+	border: 3px solid #1F252A;
+	height: 300px;
+	width: 30%;
+	margin-top: -27%;
+	float: right;
+	overflow-x: hidden;
+    overflow-y: auto;
+    background-color: #1F252A;
+    border-top-left-radius: 20px; 
+    color: white;
+    font-family: cursive;
+}
+#message{
+	height: 30px;
+	margin-left: 10%; 
+}
+#send{
+	margin-left: 3%;
+}
+#ccboardscreen{
+	text-align: right;
+	border: 1px solid black;
+	height: 240px;  
+}

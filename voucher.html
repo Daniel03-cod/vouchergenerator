@@ -13,6 +13,8 @@
 		<span id="companyname"><b>GO</b>MOBILE</span>
 		
 		<button id="alertbtn" onmousemove="alertbtn()">&hearts;</button>
+		<button onmousemove="ccbtn()">&#9824;</button>
+		<button onmousemove="addcashbtn()">&#9827;</button>
 	</div>
 		<!-- notification div -->
 	<div id="alertboard">
@@ -20,7 +22,7 @@
 	</div>
 
 	<!-- display -->
-	<div id="displayscreen" onmousemove="changeview()">
+	<div id="displayscreen" onmousemove="changeview()" onclick="changevieww()">
 		<P id="totalbalhold">AVALIABLE BALANCE<br><br><input id="totalbal" type="number" value="10000" disabled=""></P>
 		<center>
 		<label>CHOOSE DESIRED PROVIDER:</label>
@@ -52,6 +54,10 @@
 	<!-- VOUCHERSCREEN -->
 	<div id="voucherboard">
 		
+	</div>
+	<div id="ccboard">
+		<div id="ccboardscreen"></div>
+		<input type="text" id="message"><button id="send" onclick="send()">SEND</button>
 	</div>
 
 	<script type="text/javascript" src="voucher.js"></script>
