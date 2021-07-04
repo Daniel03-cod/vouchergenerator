@@ -15,6 +15,7 @@ function changeview() {
 }
 function changevieww() {
 	ccboard.style.display = 'none';
+	alertbox.style.display = 'none';
 }
 function transactionbtn() {
 	transactionboard.style.display = "block";
@@ -34,13 +35,20 @@ function generatorbtn() {
 	voucherboard.innerHTML = null;
 	var a = totalbal.value;
 	var b = amount.value;
-	var c = a - b;
-	totalbal.value = c;
-	localStorage.TotalAmount = JSON.stringify(c);
-	if (a <= 0) {
-		alert("TRANSACTION DECLINED");
-		totalbal.value = 0;
+	if (a >= 0) {
+		var c = a - b;
+		totalbal.value = c;
+		localStorage.TotalAmount = JSON.stringify(c);
+	}else{
+		if (a == 0) {}
+		localStorage.TotalAmount = JSON.stringify(0);
 	}
+	if (a == 0) {
+		totalbal.value = 0;
+		alert("INSUFFICENT BALANCE")
+		voucherboard.innerHTML = null;
+
+	}else{
 	if (provider.value == "AIRTEL") {
 	 var d = '19' + Math.floor(Math.random()*5) + Math.floor(Math.random()*10);
 	 var e = '31' + Math.floor(Math.random()*5) + Math.floor(Math.random()*10);
@@ -82,8 +90,10 @@ function generatorbtn() {
 			 var GLO = d + e + f;
 	 		voucherboard.innerHTML += d + "-" + e + 5 + "-" + f + 3;
 	 		voucherboard.innerHTML += "<br>";
+	 	}
 		}
-	}
+		}
+	
 }
 }
 }

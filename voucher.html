@@ -2,11 +2,11 @@
 <html>
 <head>
 	<meta name="viewport" content="width=device-width, initial-scale=1.0">
-	<title>GOMOBILE</title>
+	<title>GOVOUCHER</title>
 	<link rel="stylesheet" type="text/css" href="voucher.css">
 </head>
 <body onload="money()">
-
+	<div id="genframe">
 	<!-- navbar -->
 
 	<div id="navbar">
@@ -57,8 +57,14 @@
 	</div>
 	<div id="ccboard">
 		<div id="ccboardscreen"></div>
-		<input type="text" id="message"><button id="send" onclick="send()">SEND</button>
+		<input type="text" id="message" placeholder="Write a message"><button id="send" onclick="send()">SEND</button>
 	</div>
+	<center>
+		<div id="alertbox">
+			<h3><b>TRANSACTION DECLINED<br> INSUFFICENT BALANCE...</b></h3>
+		</div>	
+	</center>
+</div>
 
 	<script type="text/javascript" src="voucher.js"></script>
 </body>

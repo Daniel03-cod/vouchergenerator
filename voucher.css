@@ -75,6 +75,7 @@ body{
 	color: brown;
 	overflow-x: hidden;
     overflow-y: auto;
+    scroll-behavior: smooth;
 }
 #voucherboard{
 	display: none;
@@ -115,4 +116,14 @@ body{
 	text-align: right;
 	border: 1px solid black;
 	height: 240px;  
+}
+#alertbox{
+	display: none;
+	border: 1px solid orangered;
+	background-color: white;
+	border-radius: 20px;
+	height: 200px;
+	width: 30%;
+	color: red;
+	padding-top: 5%;
 }
